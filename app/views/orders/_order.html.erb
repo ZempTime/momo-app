@@ -1,0 +1,45 @@
+<div id="<%= dom_id order %>">
+  <div class="OrderGrid">
+    <div>
+      <p class="my-5">
+        <strong class="block font-medium mb-1">Guest code:</strong>
+        <%= order.guest_code %>
+      </p>
+
+      <p class="my-5">
+        <strong class="block font-medium mb-1">Plates:</strong>
+        <%= order.plates %>
+      </p>
+
+      <p class="my-5">
+        <strong class="block font-medium mb-1">Spice level:</strong>
+        <%= order.spice_level %>
+      </p>
+
+      <p class="my-5">
+        <strong class="block font-medium mb-1">Extra sauce:</strong>
+        <%= order.extra_sauce %>
+      </p>
+
+      <p class="my-5">
+        <strong class="block font-medium mb-1">Note:</strong>
+        <%= order.note %>
+      </p>
+
+      <p class="my-5">
+        <strong class="block font-medium mb-1">Email:</strong>
+        <%= order.email %>
+      </p>
+    </div>
+
+    <div class="mt-5">
+      <strong>Estimated price:</strong> <%= number_to_currency(order.price) %>
+    </div>
+  </div>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this order", order, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+    <%= link_to 'Edit this order', edit_order_path(order), class: "rounded-lg py-3 ml-2 px-5 bg-gray-100 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
