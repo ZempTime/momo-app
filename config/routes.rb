@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  root "orders#index"
+  get "/about", to: "landing#show"
+
+  root "landing#index"
 end
