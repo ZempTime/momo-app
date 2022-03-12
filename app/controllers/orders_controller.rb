@@ -22,6 +22,7 @@ class OrdersController < ApplicationController
   # POST /orders
   def create
     @order = Order.new(order_params)
+    @order.guest_code = guest_code
 
     if @order.save
       redirect_to @order, notice: "Order was successfully created."
@@ -53,6 +54,6 @@ class OrdersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def order_params
-      params.require(:order).permit(:guest_code, :plates, :spice_level, :extra_sauce, :note, :email)
+      params.require(:order).permit(:plates, :spice_level, :extra_sauce, :note, :email)
     end
 end
