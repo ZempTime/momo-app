@@ -1,11 +1,11 @@
 databases:
-  - name: momoapp 
-    databaseName: momoappproduction
-    user: momoapp
+  - name: mysite
+    databaseName: mysite
+    user: mysite
 
 services:
   - type: web
-    name: mount momo
+    name: mysite
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
