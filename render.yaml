@@ -1,7 +1,7 @@
 databases:
-  - name: momo-app 
+  - name: momoapp 
     databaseName: momo-app-production
-    user: momo-app
+    user: momoapp
 
 services:
   - type: web
