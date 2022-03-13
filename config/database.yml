@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: momo_app_production
-  username: momo_app
-  password: <%= ENV["MOMO_APP_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
