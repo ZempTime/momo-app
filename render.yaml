@@ -1,6 +1,6 @@
 databases:
   - name: momoapp 
-    databaseName: momo-app-production
+    databaseName: momoappproduction
     user: momoapp
 
 services:
