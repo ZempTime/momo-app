@@ -12,7 +12,7 @@ class Order < ApplicationRecord
     hot: 20
   }
 
-  PLATE_CENTS = 750
+  PLATE_CENTS = 800
   SAUCE_CENTS = 50
 
   PLATES = (1..10)
