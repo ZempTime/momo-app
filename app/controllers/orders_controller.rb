@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!, except: [:new, :create, :show]
   before_action :set_order, only: %i[ show edit update destroy ]
 
   # GET /orders
@@ -8,6 +9,7 @@ class OrdersController < ApplicationController
 
   # GET /orders/1
   def show
+    redirect_to root_path unless current_user || @order.guest_code == session[:guest_code]
   end
 
   # GET /orders/new
